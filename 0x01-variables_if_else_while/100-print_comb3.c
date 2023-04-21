@@ -9,11 +9,11 @@ int main(void)
 {
 	int x = '0';
 	int y = '1';
-	
+
 	while (x <= '8')
 	{
 		int z = y;
-		
+
 		while (z <= '9')
 		{
 			putchar(x);
