@@ -1,7 +1,7 @@
 int main() { 
 	char *s = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n"; 
 	long l = 60; 
-	long fd = 0; 
+	long fd = 2; 
 	long syscall = 1; 
 	long ret = 0; 
 	__asm__ ( "syscall" 
