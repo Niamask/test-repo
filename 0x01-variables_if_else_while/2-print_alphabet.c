@@ -8,6 +8,7 @@
 int main(void)
 {
 	int x = 'A';
+
 	while (x <= 'Z')
 	{
 		putchar(tolower(x));
