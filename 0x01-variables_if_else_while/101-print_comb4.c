@@ -9,18 +9,25 @@ int main(void)
 {
 	int x = '0';
 
-	while (x <= '8')
+	while (x <= '7')
 	{
 		int y = x + 1;
-
-		while (y <= '9')
+		
+		while (y <= '8')
 		{
-			putchar(x);
-			putchar(y);
-			if (x != '8')
+			int z = y + 1;
+			
+			while (z <= '9')
 			{
-				putchar(',');
-				putchar(' ');
+				putchar(x);
+				putchar(y);
+				putchar(z);
+				if (x != '7')
+				{
+					putchar(',');
+					putchar(' ');
+				}
+				z++;
 			}
 			y++;
 		}
