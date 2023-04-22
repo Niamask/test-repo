@@ -12,11 +12,11 @@ int main(void)
 	while (x <= '7')
 	{
 		int y = x + 1;
-		
+
 		while (y <= '8')
 		{
 			int z = y + 1;
-			
+
 			while (z <= '9')
 			{
 				putchar(x);
