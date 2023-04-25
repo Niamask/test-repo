@@ -16,14 +16,16 @@ int main(void)
 		while (y <= '8')
 		{
 			int z = x;
+
 			while (z <= '9')
 			{
 				int t;
+
 				if (z != '0')
 					t = y + 1;
 				else
 					t = y;
-				
+
 				while (t <= '9')
 				{
 					putchar(x);
