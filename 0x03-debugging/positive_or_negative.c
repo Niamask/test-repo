@@ -1,5 +1,12 @@
 #include "main.h"
 
+/**
+ * positive_or_negative - print positive or negative number
+ * @n: The character to print
+ *
+ * Return: nothing
+ */
+
 void positive_or_negative(int n)
 {
 	if (n > 0)
