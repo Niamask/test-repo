@@ -15,15 +15,14 @@ void times_table(void)
 	{
 		int y = 0;
 
-		while (y <= 9)
-		{
-			int z = x * y;
-
+		 while (y <= 9)
+        	{
+                	int z = x * y;
+			
 			if (z > 9)
 			{
 				int ld = z % 10;
 				int fd = z / 10;
-
 				_putchar(',');
 				_putchar(' ');
 				_putchar('0' + fd);
@@ -35,14 +34,15 @@ void times_table(void)
 				_putchar(' ');
 				_putchar(' ');
 				_putchar('0' + z);
+				
 			}
-			else
+			else 
 			{
 				_putchar('0' + z);
 			}
 			y++;
-		}
-		_putchar('\n');
-		x++;
+        	}
+		 _putchar('\n');
+		 x++;
 	}
 }
