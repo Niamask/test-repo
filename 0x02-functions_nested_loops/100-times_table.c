@@ -18,15 +18,33 @@ void print_times_table(int n)
 			if (j != 0)
 			{
 				if (x >= 100)
-					printf(", ");
+				{
+					_putchar(',');
+					_putchar(' ');
+					_putchar((x / 100) + '0');
+					_putchar(((x % 100) / 10) + '0');
+					_putchar((x % 10) + '0');
+				}
 				else if (x >= 10)
-					printf(",  ");
+				{
+					_putchar(',');
+					_putchar(' ');
+					_putchar(' ');
+					_putchar((x / 10) + '0');
+					_putchar((x % 10) + '0');
+				}
 				else
-					printf(",   ");
+				{
+					_putchar(',');
+					_putchar(' ');
+					_putchar(' ');
+					_putchar(' ');
+					_putchar(x + '0');
+				}
 			}
-			printf("%d", x);
+			else
+				_putchar(x + '0');
 		}
-		printf("\n");
+		_putchar('\n');
 	}
-	printf("\n");
 }
