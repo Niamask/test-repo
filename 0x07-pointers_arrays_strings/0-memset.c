@@ -1,8 +1,8 @@
 /**
- * _memset - a function ...
- * @s: the chaine
- * @b: the char
- * @n: the int
+ * _memset - a function that fills memory with a constant byte.
+ * @s: string
+ * @b: char
+ * @n: int
  *
  * Return: 1 or 0
  */
