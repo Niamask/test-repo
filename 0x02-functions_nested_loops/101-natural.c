@@ -1,9 +1,10 @@
 #include <stdio.h>
- /*
- * main - check the code.
+/*
+ * main - Prints the sum of all the multiples of 3 or 5 below 1024.
  *
  * Return: Always 0.
  */
+
 int main(void)
 {
 	int i, sum3, multi3, sum5, multi5;
@@ -12,13 +13,13 @@ int main(void)
 	sum3 = 0;
 	sum5 = 0;
 
-	while (sum3 < 1024)
+	while (i < 1024)
 	{
 		multi3 = 3 * i;
 		sum3 = sum3 + multi3;
 		i++;
 	}
-	while (sum5 < 1024)
+	while (i < 1024)
 	{
 		multi5 = 5 * i;
 		sum5 = sum5 + multi5;
