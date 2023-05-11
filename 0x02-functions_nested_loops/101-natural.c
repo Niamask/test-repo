@@ -19,6 +19,7 @@ int main(void)
 		sum3 = sum3 + multi3;
 		i++;
 	}
+	i = 1;
 	while (i < 1024)
 	{
 		multi5 = 5 * i;
