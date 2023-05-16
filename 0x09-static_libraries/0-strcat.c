@@ -1,6 +1,14 @@
+#include <stdio.h>
+#include <string.h>
 #include "main.h"
-
-char	*_strcat(char *dest, char *src)
+/**
+ * *_strcat - concatenates two strings.
+ * @dest : string
+ * @src : string
+ *
+ * Return: nothing
+ */
+char *_strcat(char *dest, char *src)
 {
 	int	i;
 	int	j;

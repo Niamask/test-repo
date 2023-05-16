@@ -1,5 +1,13 @@
 #include "main.h"
 
+/**
+ * _strcmp - a function ...
+ * @s1: the chaine
+ * @s2: the chaine
+ *
+ * Return: 1 or 0
+ */
+
 int	_strcmp(char *s1, char *s2)
 {
 	while (*s1 != '\0' && (*s1 == *s2))
