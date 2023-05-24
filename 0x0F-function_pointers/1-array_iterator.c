@@ -1,4 +1,4 @@
-#include<stddef.h>
+#include <stddef.h>
 
 /**
  * array_iterator - a function given as a parameter
@@ -11,7 +11,7 @@
 
 void array_iterator(int *array, size_t size, void (*action)(int))
 {
-	size_t i = 0;
+	size_t i;
 
 	if (action == NULL)
 		return;
