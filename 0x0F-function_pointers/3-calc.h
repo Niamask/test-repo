@@ -1,5 +1,9 @@
-#ifndef FUNCTION_POINTERS_H
-#define FUNCTION_POINTERS_H
+#ifndef FUNCTION_POINTERS
+#define FUNCTION_POINTERS
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 /**
  * struct op - Struct op
@@ -7,10 +11,11 @@
  * @op: The operator
  * @f: The function associated
  */
+
 typedef struct op
 {
-    char *op;
-    int (*f)(int a, int b);
+	char *op;
+	int (*f)(int a, int b);
 } op_t;
 
 int op_add(int a, int b);
