@@ -1,3 +1,4 @@
+#include "variadic_functions.h"
 #include <stdio.h>
 #include <stdarg.h>
 
@@ -5,7 +6,7 @@
  * main - function that returns the sum of all its parameters.
  * @n: const integer.
  *
- * Return: Always 0.
+ * Return: sum.
  */
 
 int sum_them_all(const unsigned int n, ...)
