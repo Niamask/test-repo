@@ -5,6 +5,7 @@
  * print_numbers - function that prints numbers, followed by a new line.
  * @separator: character
  * @n: integer
+ * @...: a variable number of strings to be printed.
  *
  * return: nothing.
  */

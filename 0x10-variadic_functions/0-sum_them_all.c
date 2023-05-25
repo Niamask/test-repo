@@ -5,6 +5,7 @@
 /**
  * main - function that returns the sum of all its parameters.
  * @n: const integer.
+ * @...: a variable number of strings to be printed.
  *
  * Return: sum.
  */
