@@ -3,9 +3,8 @@
 #include <stdio.h>
 
 /**
- * print_strings - function that prints string, followed by a new line.
- * @separator: character
- * @n: integer
+ * print_all - function that prints anything..
+ * @format: counst character
  * @...: a variable number of strings to be printed.
  *
  * return: nothing.
@@ -13,4 +12,43 @@
 
 void print_all(const char * const format, ...)
 {
+	int i = 0;
+	char *string, *sep = "";
+
+	va_list list;
+
+	va_start(list, format);
+
+	if (format)
+	{
+		while (format[i])
+		{
+			switch (format[i])
+			{
+				case 'c':
+					printf("%s%c", sep, va_arg(list, int));
+					break;
+				case 'i':
+					printf("%s%d", sep, va_arg(list, int));
+					break;
+				case 'f':
+					printf("%s%f", sep, va_arg(list, double));
+					break;
+				case 's':
+					string = va_arg(list, char *);
+					if (!string)
+						string = "(nil)";
+					printf("%s%s", sep, string);
+					break;
+				default:
+					i++;
+					continue;
+			}
+			sep = ", ";
+			i++;
+		}
+	}
+
+	printf("\n");
+	va_end(list);
 }
