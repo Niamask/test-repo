@@ -5,29 +5,33 @@
 #include "main.h"
 
 /**
- * binary_to_uint - function that converts a binary number to an unsigned int.
- * @b : character
+ * power - function that return a pow of a number n.
+ * @n : integer
+ * @x : integer
  *
- * Return: 0 or converted number.
+ * Return: 0 or 1 or pow number.
  */
 unsigned int power(int n, int x)
 {
 	int i, pow = 1;
 
-	if( x == 0)
+	if (x == 0)
 		return (1);
 	else if (x == 1)
 		return (n);
-	else 
+	for (i = 0; i < x; i++)
 	{
-		for( i = 0; i < x; i++)
-        	{
-                        pow *= n;
-        	}
-        	return (pow);
+		pow *= n;
 	}
+	return (pow);
 }
 
+/**
+ * binary_to_uint - function that converts a binary number to an unsigned int.
+ * @b : character
+ *
+ * Return: 0 or converted number.
+ */
 unsigned int binary_to_uint(const char *b)
 {
 	int i, j = 0;
