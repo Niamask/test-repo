@@ -10,6 +10,23 @@
  *
  * Return: 0 or converted number.
  */
+unsigned int power(int n, int x)
+{
+	int i, pow = 1;
+
+	if( x == 0)
+		return (1);
+	else if (x == 1)
+		return (n);
+	else 
+	{
+		for( i = 0; i < x; i++)
+        	{
+                        pow *= n;
+        	}
+        	return (pow);
+	}
+}
 
 unsigned int binary_to_uint(const char *b)
 {
@@ -20,7 +37,8 @@ unsigned int binary_to_uint(const char *b)
 	{
 		if (b[i] == '1')
 		{
-			sum += pow(2, j);
+			/*sum += pow(2, j);*/
+			sum += power(2, j);
 			j++;
 		}
 		else if (b[i] == '0')
