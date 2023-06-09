@@ -1,8 +1,8 @@
 #include <stdio.h>
-#include "main.h"
 #include <string.h>
 #include <stdlib.h>
 #include <math.h>
+#include "main.h"
 
 /**
  * binary_to_uint - function that converts a binary number to an unsigned int.
@@ -13,14 +13,23 @@
 
 unsigned int binary_to_uint(const char *b)
 {
-	long unsigned int i, sum = 0;
+	int i, j = 0;
+	unsigned int sum = 0;
 
-	/*int x = atoi(b);*/
-	for (i = 0; i < strlen(b); i++)
+	for (i = strlen(b) - 1 ; i >= 0; i--)
 	{
-		if (b[i] == 1)
-			sum += pow(2, i);
+		if (b[i] == '1')
+		{
+			sum += pow(2, j);
+			j++;
+		}
+		else if (b[i] == '0')
+		{
+			sum += 0;
+			j++;
+		}
+		else
+			return (0);
 	}
-
 	return (sum);
 }
