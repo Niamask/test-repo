@@ -1,7 +1,5 @@
 #include "main.h"
 
-#define BUF_SIZE 9096
-
 /**
  * read_textfile - reads a text file and prints it to the POSIX standard output
  * @filename: the list
@@ -11,25 +9,38 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int f, ret;
-	char buf[BUF_SIZE + 1];
-	size_t cpt = 1;
+	char *buffer = NULL;
+	ssize_t b_read;
+	ssize_t b_written;
+	int f;
 
-	if (filename == NULL)
+	if (!(filename && letters))
 		return (0);
 
 	f = open(filename, O_RDONLY);
-
 	if (f == -1)
 		return (0);
 
-	while ((ret = read(f, buf, letters)))
-	{
-		buf[ret] = '\0';
-		printf("%s", buf);
-		cpt = cpt + ret;
-	}
+	buffer = malloc(sizeof(char) * letters);
+	if (!buffer)
+		return (0);
 
+	b_read = read(f, buffer, letters);
 	close(f);
-	return (cpt - 1);
+
+	if (b_read < 0)
+	{
+		free(buffer);
+		return (0);
+	}
+	if (!b_read)
+		b_read = letters;
+
+	b_written = write(STDOUT_FILENO, buffer, b_read);
+	free(buffer);
+
+	if (b_written < 0)
+		return (0);
+
+	return (b_written);
 }
