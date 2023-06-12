@@ -1,4 +1,9 @@
+#include <stdio.h>
 #include "main.h"
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <unistd.h>
 #include <string.h>
 
 #define BUF_SIZE 9096
