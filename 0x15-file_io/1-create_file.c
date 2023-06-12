@@ -6,7 +6,6 @@
 #include <unistd.h>
 #include <string.h>
 
-#define BUF_SIZE 9096
 
 /**
  * create_file - function that creates a file.
